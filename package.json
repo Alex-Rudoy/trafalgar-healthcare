@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "webpack"
   },
   "author": "Alex Rudoy",
@@ -14,6 +14,7 @@
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.2",
     "dotenv": "^8.2.0",
     "html-webpack-plugin": "^4.3.0",

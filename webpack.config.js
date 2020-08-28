@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // Require  html-webpack-plugin plugin
+const copyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: __dirname + "/app/js/index.js", // webpack entry point. Module to start building dependency graph
@@ -41,6 +42,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + "/app/index.html",
       inject: "body",
+    }),
+    new copyWebpackPlugin({
+      patterns: [
+        {
+          from: "app/img",
+          to: "img",
+        },
+      ],
     }),
   ],
   devServer: {
