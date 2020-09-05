@@ -1,0 +1,10 @@
+.footer {
+  height: 432px;
+  background: url(../img/dots.png) no-repeat -15px 335px, linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+
+  &__container {
+    width: 1120px;
+    display: flex;
+    flex-direction: row;
+  }
+}
