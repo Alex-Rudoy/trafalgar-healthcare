@@ -1,0 +1,20 @@
+.section {
+  &__title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 18px;
+    color: #7d7987;
+  }
+
+  &__divider {
+    width: 56px;
+    height: 2px;
+    background-color: #000;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+}
