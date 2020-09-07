@@ -1,0 +1,14 @@
+.dots {
+  width: 150px;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  position: absolute;
+
+  & div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dfedfd;
+  }
+}

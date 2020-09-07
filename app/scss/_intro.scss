@@ -1,7 +1,7 @@
 .intro {
   margin-top: 170px;
   margin-bottom: 192px;
-  background: url(../img/dots.png) no-repeat -50px 0;
+  position: relative;
 
   &__col1 {
     width: 450px;
@@ -42,5 +42,10 @@
       text-align: center;
       line-height: 54px;
     }
+  }
+
+  &__dots {
+    top: 0;
+    left: -40px;
   }
 }
