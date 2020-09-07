@@ -1,0 +1,20 @@
+.providers {
+  margin-bottom: 230px;
+
+  &__col1 {
+    width: 570px;
+    margin-right: 100px;
+
+    & img {
+      float: right;
+    }
+  }
+
+  &__col2 {
+    width: 450px;
+
+    & p {
+      margin-bottom: 36px;
+    }
+  }
+}
