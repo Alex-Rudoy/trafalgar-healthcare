@@ -1,9 +1,115 @@
 .testimonials {
+  margin-bottom: 220px;
+
   &__container {
     width: 1120px;
     height: 425px;
-
+    margin: 0 auto 42px;
+    padding: 64px 118px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
     border-radius: 24px;
+  }
+
+  &__testimonial {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    border: 4px solid white;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+
+  &__author {
+    width: 294px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__text {
+    width: 420px;
+    font-size: 19px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__nav {
+    width: 336px;
+    height: 20px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__arrow {
+    margin-right: 90px;
+
+    & div {
+      border-radius: 3px;
+      background-color: #b4d2fb;
+
+      &:first-child {
+        width: 15px;
+        height: 3px;
+        transform: translateY(8.5px) rotate(-45deg);
+        transform-origin: 1.5px 1.5px;
+      }
+
+      &:nth-child(2) {
+        width: 30px;
+        height: 3px;
+        transform: translateY(5.5px);
+      }
+
+      &:last-child {
+        width: 15px;
+        height: 3px;
+        transform: translateY(2.5px) rotate(45deg);
+        transform-origin: 1.5px 1.5px;
+      }
+    }
+
+    &--right {
+      transform: rotate(180deg);
+      margin-right: 0;
+      margin-left: 90px;
+    }
+
+    &:hover div {
+      background-color: #458ff6;
+    }
+  }
+
+  &__slider-step {
+    width: 20px;
+    height: 20px;
+
+    & div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #b4d2fb;
+      margin: 5px 5px;
+    }
+
+    &:hover div {
+      background-color: #458ff6;
+    }
   }
 }
