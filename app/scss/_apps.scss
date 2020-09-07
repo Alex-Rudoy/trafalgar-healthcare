@@ -1,0 +1,22 @@
+.apps {
+  margin-bottom: 230px;
+
+  &__col1 {
+    width: 450px;
+    margin-right: 100px;
+
+    & p {
+      margin-bottom: 36px;
+    }
+
+    & a img {
+      position: relative;
+      top: 2px;
+      left: 10px;
+    }
+  }
+
+  &__col2 {
+    width: 570px;
+  }
+}
