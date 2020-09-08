@@ -2,10 +2,58 @@
   height: 432px;
   position: relative;
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  padding-top: 118px;
+  overflow: hidden;
 
-  &__container {
-    width: 1120px;
-    display: flex;
-    flex-direction: row;
+  & .container {
+    align-items: flex-start;
+    width: 1265px;
+
+    & div {
+      flex: 3;
+
+      &:first-child {
+        flex: 5;
+        margin-left: 75px;
+        margin-right: 145px;
+      }
+    }
+  }
+
+  & p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    margin-top: 16px;
+
+    &:last-child {
+      margin-top: 32px;
+    }
+  }
+
+  & h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  & ul {
+    list-style: none;
+  }
+
+  & li {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 38px;
+    color: #ffffff;
+  }
+
+  &__dots {
+    bottom: -30px;
+    left: -30px;
+    opacity: 0.5;
   }
 }
