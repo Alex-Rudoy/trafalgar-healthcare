@@ -1,9 +1,6 @@
 import "../scss/main.scss";
+import Intersection from "./_intersection";
 
-class TestClass {
-  constructor() {
-    let msg = "Using ES2015+ syntax";
-    console.log(msg);
-  }
-}
-let test = new TestClass();
+window.onload = () => {
+  let intersection = new Intersection();
+};

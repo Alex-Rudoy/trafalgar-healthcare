@@ -6,10 +6,13 @@
   &__col1 {
     width: 450px;
     margin-right: 100px;
+    opacity: 0;
+    transform: translate(-100px, 0);
   }
 
   &__col2 {
     width: 570px;
+    transform: translate(100px, 0);
   }
 
   &__header {

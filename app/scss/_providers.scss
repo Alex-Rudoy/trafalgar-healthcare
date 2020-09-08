@@ -4,6 +4,9 @@
   &__col1 {
     width: 570px;
     margin-right: 100px;
+    width: 570px;
+    opacity: 0;
+    transform: translate(-100px, 0);
 
     & img {
       float: right;
@@ -12,6 +15,9 @@
 
   &__col2 {
     width: 450px;
+    width: 570px;
+    opacity: 0;
+    transform: translate(100px, 0);
 
     & p {
       margin-bottom: 36px;

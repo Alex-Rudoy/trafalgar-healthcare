@@ -4,6 +4,8 @@
   &__col1 {
     width: 450px;
     margin-right: 100px;
+    opacity: 0;
+    transform: translate(-100px, 0);
 
     & p {
       margin-bottom: 36px;
@@ -18,5 +20,7 @@
 
   &__col2 {
     width: 570px;
+    opacity: 0;
+    transform: translate(100px, 0);
   }
 }

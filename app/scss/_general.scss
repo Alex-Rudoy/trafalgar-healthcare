@@ -5,10 +5,20 @@
   font-family: "Muli", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a,
 a:visited,
 a:hover,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+
+div.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 0.5s;
 }
