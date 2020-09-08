@@ -1,11 +1,24 @@
+@import "./mixins";
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1120px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 16px;
+  margin-left: 16px;
+
+  @include atMedium {
+    justify-content: left;
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+  }
+
+  @include atLarge {
+    justify-content: center;
+    width: 1120px;
+  }
 
   &--row {
     flex-direction: row;

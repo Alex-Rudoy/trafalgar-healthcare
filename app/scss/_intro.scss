@@ -1,35 +1,66 @@
+@import "./mixins";
+
 .intro {
   margin-top: 150px;
   margin-bottom: 150px;
   position: relative;
 
   &__col1 {
-    width: 450px;
-    margin-right: 100px;
     opacity: 0;
     transform: translate(-100px, 0);
+
+    @include atMedium {
+      width: 450px;
+      margin-right: 100px;
+    }
   }
 
   &__col2 {
-    width: 570px;
-    transform: translate(100px, 0);
+    display: none;
+
+    @include atMedium {
+      display: block;
+      position: absolute;
+      right: -300px;
+      z-index: -1;
+    }
+
+    @include atLarge {
+      position: initial;
+      z-index: initial;
+      width: 570px;
+      transform: translate(100px, 0);
+    }
   }
 
   &__header {
+    text-align: center;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 25px;
+
+    @include atMedium {
+      text-align: initial;
+      font-size: 48px;
+    }
   }
 
   &__desc {
+    text-align: center;
+    font-size: 16px;
     font-weight: 300;
-    font-size: 21px;
     color: #7d7987;
     margin-bottom: 45px;
+
+    @include atMedium {
+      font-size: 21px;
+      text-align: initial;
+    }
   }
 
   &__button {
     display: block;
+    margin: 0 auto;
     width: 200px;
     height: 56px;
     background: #458ff6;
@@ -37,6 +68,10 @@
     font-weight: bold;
     font-size: 18px;
     border-radius: 55px;
+
+    @include atMedium {
+      margin: 0;
+    }
 
     & a {
       display: block;
