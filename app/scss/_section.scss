@@ -2,7 +2,7 @@
 
 .section {
   &__title {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: bold;
 
     @include atMedium {
@@ -16,11 +16,13 @@
 
   &__desc {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 24px;
     color: #7d7987;
 
     @include atMedium {
       font-size: 18px;
+      line-height: 30px;
     }
 
     &--centered {
