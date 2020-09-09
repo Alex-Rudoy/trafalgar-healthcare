@@ -2,8 +2,12 @@
 
 .section {
   &__title {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
+
+    @include atMedium {
+      font-size: 36px;
+    }
 
     &--white {
       color: #fff;
@@ -12,8 +16,12 @@
 
   &__desc {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 14px;
     color: #7d7987;
+
+    @include atMedium {
+      font-size: 18px;
+    }
 
     &--centered {
       text-align: center;
