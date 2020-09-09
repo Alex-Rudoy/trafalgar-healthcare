@@ -1,9 +1,16 @@
+@import "./mixins";
+
 .dots {
   width: 150px;
   height: 130px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   position: absolute;
+  z-index: -1;
+
+  @include atLarge {
+    z-index: 0;
+  }
 
   & div {
     width: 10px;

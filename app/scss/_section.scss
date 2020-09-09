@@ -1,3 +1,5 @@
+@import "./mixins";
+
 .section {
   &__title {
     font-size: 36px;
@@ -15,7 +17,10 @@
 
     &--centered {
       text-align: center;
-      width: 950px;
+
+      @include atLarge {
+        width: 950px;
+      }
     }
   }
 
