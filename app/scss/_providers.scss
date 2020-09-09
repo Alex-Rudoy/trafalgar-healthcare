@@ -1,23 +1,52 @@
+@import "./mixins";
+
 .providers {
   margin-bottom: 150px;
 
   &__col1 {
-    width: 570px;
-    margin-right: 100px;
-    width: 570px;
-    opacity: 0;
-    transform: translate(-100px, 0);
+    display: none;
 
-    & img {
-      float: right;
+    @include atMedium {
+      display: block;
+      position: absolute;
+      left: -300px;
+      z-index: -1;
+    }
+
+    @include atLarge {
+      position: initial;
+      z-index: initial;
+      width: 570px;
+      transform: translate(-100px, 0);
+      opacity: 0;
+
+      & img {
+        float: right;
+      }
     }
   }
 
   &__col2 {
-    width: 450px;
-    width: 570px;
     opacity: 0;
     transform: translate(100px, 0);
+
+    @include atMedium {
+      width: 450px;
+      margin-left: 100px;
+
+      & * {
+        margin-left: auto;
+        text-align: right;
+
+        @include atLarge {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @include atLarge {
+      text-align: left;
+    }
 
     & p {
       margin-bottom: 36px;
