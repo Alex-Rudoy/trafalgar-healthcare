@@ -1,11 +1,16 @@
+@import "./mixins";
+
 .apps {
   margin-bottom: 150px;
 
   &__col1 {
-    width: 450px;
-    margin-right: 100px;
     opacity: 0;
     transform: translate(-100px, 0);
+
+    @include atMedium {
+      width: 450px;
+      margin-right: 100px;
+    }
 
     & p {
       margin-bottom: 36px;
@@ -19,8 +24,21 @@
   }
 
   &__col2 {
-    width: 570px;
-    opacity: 0;
-    transform: translate(100px, 0);
+    display: none;
+
+    @include atMedium {
+      display: block;
+      position: absolute;
+      right: -300px;
+      z-index: -1;
+    }
+
+    @include atLarge {
+      position: initial;
+      z-index: initial;
+      width: 570px;
+      transform: translate(100px, 0);
+      opacity: 0;
+    }
   }
 }
