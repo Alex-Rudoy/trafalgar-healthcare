@@ -1,5 +1,6 @@
+@import "./mixins";
+
 .header {
-  position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
@@ -15,14 +16,35 @@
     rgba(255, 255, 255, 0) 100%
   );
 
+  @include atMedium {
+    position: fixed;
+  }
+
   &__container {
     width: 1120px;
     height: 41px;
     margin-top: 32px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    @include atMedium {
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    @include atLarge {
+      padding: 0px;
+    }
+
+    & nav {
+      display: none;
+
+      @include atMedium {
+        display: initial;
+      }
+    }
   }
 
   & li {

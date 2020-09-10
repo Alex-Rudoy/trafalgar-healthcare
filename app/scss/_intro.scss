@@ -1,9 +1,17 @@
 @import "./mixins";
 
 .intro {
-  margin-top: 150px;
+  margin-top: 20px;
   margin-bottom: 150px;
   position: relative;
+
+  @include atMedium {
+    margin-top: 180px;
+  }
+
+  @include atLarge {
+    margin-top: 150px;
+  }
 
   &__col1 {
     opacity: 0;
