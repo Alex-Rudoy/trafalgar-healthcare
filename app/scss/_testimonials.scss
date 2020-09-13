@@ -1,11 +1,11 @@
+@import "./mixins";
+
 .testimonials {
   margin-bottom: 150px;
 
   &__container {
-    width: 1120px;
-    height: 425px;
-    margin: 0 auto 42px;
-    padding: 64px 118px 90px;
+    margin: 0 16px 42px;
+    padding: 32px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,11 +13,29 @@
     border-radius: 24px;
     position: relative;
     overflow: hidden;
+
+    @include atMedium {
+      height: 350px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 750px;
+    }
+
+    @include atLarge {
+      height: 425px;
+      width: 1120px;
+      padding: 64px 118px 80px;
+    }
   }
 
   &__testimonial {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @include atMedium {
+      flex-direction: row;
+    }
   }
 
   &__avatar {
@@ -26,11 +44,26 @@
     border-radius: 50%;
     border: 4px solid white;
     overflow: hidden;
-    margin-right: 30px;
+    margin-bottom: 10px;
+
+    @include atMedium {
+      margin-right: 24px;
+      margin-bottom: 0px;
+    }
+
+    @include atLarge {
+      margin-right: 30px;
+    }
   }
 
   &__author {
-    width: 294px;
+    @include atMedium {
+      width: 250px;
+    }
+
+    @include atLarge {
+      width: 294px;
+    }
   }
 
   &__name {
@@ -38,18 +71,37 @@
     font-size: 22px;
     color: white;
     margin-bottom: 10px;
+    text-align: center;
+
+    @include atMedium {
+      text-align: left;
+    }
   }
 
   &__title {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+    text-align: center;
+
+    @include atMedium {
+      margin-bottom: 0px;
+      text-align: left;
+    }
   }
 
   &__text {
-    width: 420px;
     font-size: 19px;
     line-height: 30px;
     color: rgba(255, 255, 255, 0.9);
+
+    @include atMedium {
+      width: 300px;
+    }
+
+    @include atLarge {
+      width: 420px;
+    }
   }
 
   &__nav {
@@ -120,11 +172,21 @@
     top: -12px;
     right: -69px;
     opacity: 0.5;
+    z-index: 0;
   }
 
   &__outer-dots {
-    top: -200px;
-    left: -440px;
+    top: -138px;
+    left: -56px;
     z-index: -1;
+
+    @include atMedium {
+      top: -200px;
+      left: -255px;
+    }
+
+    @include atLarge {
+      left: -440px;
+    }
   }
 }

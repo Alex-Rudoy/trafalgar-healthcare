@@ -44,13 +44,17 @@
     height: 2px;
     background-color: #000;
 
-    &--white {
-      background-color: #fff;
-      margin-bottom: 57px;
-    }
-
     @include atMedium {
       margin: 26px 0 32px;
+    }
+
+    &--white {
+      background-color: #fff;
+      margin-bottom: 32px;
+
+      @include atLarge {
+        margin-bottom: 57px;
+      }
     }
   }
 
