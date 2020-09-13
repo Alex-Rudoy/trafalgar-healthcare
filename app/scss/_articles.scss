@@ -1,30 +1,77 @@
+@import "./mixins";
+
 .articles {
   margin-bottom: 150px;
   background: url(../img/articlesbg.png) no-repeat right;
   position: relative;
 
+  &__slider {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+
+    -ms-overflow-style: none; /* IE / Edge */
+    scrollbar-width: none; /* FF */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include atMedium {
+      width: 100%;
+      overflow-x: initial;
+      overflow-y: initial;
+    }
+  }
+
   &__grid {
+    width: 964px;
+    padding: 0 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 34px;
     margin-bottom: 69px;
+    gap: 16px;
+
+    @include atMedium {
+      gap: 35px;
+      width: auto;
+      padding: 0;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include atLarge {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   &__article {
-    width: 350px;
+    width: 300px;
     height: 512px;
     border-radius: 20px;
     background-color: #fff;
     overflow: hidden;
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
-    opacity: 0;
-    transform: translate(0px, 100px);
+    opacity: 1;
 
-    &:nth-child(3n + 2) {
+    @include atMedium {
+      width: 350px;
+      opacity: 0;
+      transform: translate(0px, 100px);
+    }
+
+    &:nth-child(2) {
       transition-delay: 0.1s;
     }
-    &:nth-child(3n) {
+    &:nth-child(3) {
       transition-delay: 0.2s;
+
+      @include atMedium {
+        display: none;
+      }
+
+      @include atLarge {
+        display: block;
+      }
     }
   }
 
@@ -45,10 +92,14 @@
 
   &__title {
     font-weight: bold;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 32px;
     color: #000000;
     margin-bottom: 12px;
+
+    @include atMedium {
+      font-size: 21px;
+    }
   }
 
   &__preview {

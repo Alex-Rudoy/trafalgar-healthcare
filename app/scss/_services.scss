@@ -34,9 +34,11 @@
     width: 1912px;
     margin: 80px 0 70px;
     position: relative;
+    padding: 0 16px;
 
     @include atMedium {
       width: auto;
+      padding: 0;
       gap: 36px;
       grid-template-columns: 1fr 1fr;
     }
@@ -54,22 +56,6 @@
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
     padding: 24px 24px;
     opacity: 1;
-
-    &:first-child {
-      margin-left: 16px;
-
-      @include atMedium {
-        margin-left: 0;
-      }
-    }
-
-    &:nth-child(6) {
-      margin-right: 16px;
-
-      @include atMedium {
-        margin-right: 0;
-      }
-    }
 
     @include atMedium {
       width: 350px;
