@@ -1,5 +1,11 @@
 @import "./mixins";
 
+// this is scroll hack
+section:not(:first-child) {
+  margin-top: -120px;
+  padding-top: 120px;
+}
+
 .section {
   &__title {
     text-align: center;

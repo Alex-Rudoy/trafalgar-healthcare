@@ -14,18 +14,18 @@
           <img src="./img/logo.png" />
           <nav>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Find a doctor</a></li>
-              <li><a href="#">Apps</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">About us</a></li>
+              <li><a href="#home" id="home-link">Home</a></li>
+              <li><a href="#services" id="services-link">Our services</a></li>
+              <li><a href="#about" id="about-link">About us</a></li>
+              <li><a href="#testimonials" id="testimonials-link">Testimonials</a></li>
+              <li><a href="#articles" id="articles-link">Articles</a></li>
             </ul>
           </nav>
         </div>
       </header>
 
       <main>
-        <section class="intro">
+        <section class="intro" id="home" data-header-link="#home-link">
           <div class="container container--row">
             <div class="intro__col1 to-animate">
               <h1 class="intro__header">Virtual healthcare for you</h1>
@@ -67,7 +67,7 @@
           </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="services" data-header-link="#services-link">
           <div class="container">
             <h2 class="section__title">Our services</h2>
             <div class="section__divider"></div>
@@ -141,70 +141,72 @@
           </div>
         </section>
 
-        <section class="providers">
-          <div class="container container--row-reverse">
-            <div class="providers__col2 to-animate">
-              <h2 class="section__title">Leading healthcare providers</h2>
-              <div class="section__divider"></div>
-              <p class="section__desc">
-                Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone.
-                To us, it’s not just work. We take pride in the solutions we deliver
-              </p>
-              <div class="section__button"><a href="#">Learn more</a></div>
-            </div>
-            <div class="providers__col1 to-animate">
-              <img src="/img/providers.png" />
-            </div>
-          </div>
-          <div class="dots providers__dots">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </section>
-
-        <section class="apps">
-          <div class="container container--row">
-            <div class="apps__col1 to-animate">
-              <h2 class="section__title">Download our mobile apps</h2>
-              <div class="section__divider"></div>
-              <p class="section__desc">
-                Our dedicated patient engagement app and web portal allow you to access information instantaneously (no
-                tedeous form, long calls, or administrative hassle) and securely
-              </p>
-              <div class="section__button">
-                <a href="#">Download <img src="./img/arrow.svg" /></a>
+        <section id="about" data-header-link="#about-link">
+          <div class="providers">
+            <div class="container container--row-reverse">
+              <div class="providers__col2 to-animate">
+                <h2 class="section__title">Leading healthcare providers</h2>
+                <div class="section__divider"></div>
+                <p class="section__desc">
+                  Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for
+                  everyone. To us, it’s not just work. We take pride in the solutions we deliver
+                </p>
+                <div class="section__button"><a href="#">Learn more</a></div>
+              </div>
+              <div class="providers__col1 to-animate">
+                <img src="/img/providers.png" />
               </div>
             </div>
-            <div class="apps__col2 to-animate">
-              <img src="./img/apps.png" />
+            <div class="dots providers__dots">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+          <div class="apps">
+            <div class="container container--row">
+              <div class="apps__col1 to-animate">
+                <h2 class="section__title">Download our mobile apps</h2>
+                <div class="section__divider"></div>
+                <p class="section__desc">
+                  Our dedicated patient engagement app and web portal allow you to access information instantaneously
+                  (no tedeous form, long calls, or administrative hassle) and securely
+                </p>
+                <div class="section__button">
+                  <a href="#">Download <img src="./img/arrow.svg" /></a>
+                </div>
+              </div>
+              <div class="apps__col2 to-animate">
+                <img src="./img/apps.png" />
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials" data-header-link="#testimonials-link">
           <div class="testimonials__container">
             <h2 class="section__title section__title--white">What our customers are saying</h2>
             <div class="section__divider section__divider--white"></div>
@@ -294,7 +296,7 @@
           </div>
         </section>
 
-        <section class="articles">
+        <section class="articles" id="articles" data-header-link="#articles-link">
           <div class="container">
             <h2 class="section__title">Check out our latest articles</h2>
             <div class="section__divider"></div>

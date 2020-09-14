@@ -51,9 +51,12 @@
     display: inline-block;
     font-size: 18px;
     color: #1f1534;
-    opacity: 0.5;
 
-    &:first-child {
+    & a {
+      opacity: 0.5;
+    }
+
+    & .active {
       opacity: 1;
       font-weight: bold;
     }
