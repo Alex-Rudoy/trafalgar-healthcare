@@ -32,13 +32,19 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: opacity 0.5s linear;
 
     @include atMedium {
       flex-direction: row;
     }
+
+    &--hidden {
+      opacity: 0;
+    }
   }
 
   &__avatar {
+    position: relative;
     width: 141px;
     height: 141px;
     border-radius: 50%;
@@ -54,6 +60,14 @@
     @include atLarge {
       margin-right: 30px;
     }
+  }
+
+  &__img {
+    position: absolute;
+    width: 266px;
+    height: 266px;
+    top: 0;
+    left: 0;
   }
 
   &__author {
@@ -164,6 +178,10 @@
     }
 
     &:hover div {
+      background-color: #458ff6;
+    }
+
+    &--active div {
       background-color: #458ff6;
     }
   }
