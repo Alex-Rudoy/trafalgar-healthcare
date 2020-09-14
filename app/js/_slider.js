@@ -73,7 +73,6 @@ export default class Intersection {
       this.current = 3;
     }
     this.current = this.current % 4;
-    console.log(this.current);
 
     clearTimeout(this.fade);
 
@@ -89,7 +88,6 @@ export default class Intersection {
         elem.classList.remove("testimonials__slider-step--active");
         if (elem.dataset.step == this.current) elem.classList.add("testimonials__slider-step--active");
       });
-      console.log(this.img.style.top, this.img.style.left);
       this.testimonial.classList.remove("testimonials__testimonial--hidden");
     }, 700);
 
